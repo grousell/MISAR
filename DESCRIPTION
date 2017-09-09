@@ -1,11 +1,10 @@
 Package: MISAR
 Type: Package
-Title: What the Package Does (Title Case)
+Title: R Training for London MISA PNC
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Author: Greg Rousell
+Maintainer: grousell@gmail.com
+Description: An introduction to R for school board analysts. 
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
