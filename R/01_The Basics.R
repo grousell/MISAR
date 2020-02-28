@@ -37,6 +37,14 @@ vec2 <- c (1,2,3,4,5) # Numeric
 fun1(vec2)
 fun2(vec2)
 
+# New function
+fun3 <- function(x){
+  ifelse (x =="a", "A",
+          ifelse (x == "b", "A", "B")
+  )
+}
+fun3 (vec1)
+
 # Factors - numeric assignment to nominal variable
 
 gender <- c ("Male", "Male", "Female", "Male", "Female")
@@ -50,7 +58,8 @@ as.numeric(gender)
 # Packages ----------------------------------------------------------------
 # http://www.tidyverse.org
 
-library(tidyverse) # Bundle of many functions that make data wrangling much easier than Base R
+library(tidyverse)
+# Bundle of many functions that make data wrangling much easier than Base R
 # E.g. read.csv (base) and read_csv (tidyverse) both read a .csv file.
 # read.csv converts characters to text by default, read_csv keeps as characters
 # read_csv is faster than read.csv.
@@ -119,11 +128,4 @@ glimpse(survey)
 # Quick analyses
 table (survey$useful)
 prop.table (table (survey$useful))
-
-# Recoding Variables ------------------------------------------------------
-
-
-
-
-
 
