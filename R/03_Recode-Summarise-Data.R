@@ -4,9 +4,22 @@
 # Load Packages -----------------------------------------------------------
 library(tidyverse)
 
-# Load survey data, select variables of interest and rename
+# Load survey data
 
-survey <- read_csv("https://raw.githubusercontent.com/grousell/MISAR/master/Data/survey_data.csv") %>%
+df_1 <- read_csv ("https://raw.githubusercontent.com/grousell/MISAR/master/Data/survey_data_1.csv")
+df_2 <- read_csv ("https://raw.githubusercontent.com/grousell/MISAR/master/Data/survey_data_2.csv")
+
+
+# Merge two data sets together --------------------------------------------
+
+df <- df_1 %>%
+  left_join (df_2, by = c ("RespondentID"))
+
+# Rename Variables --------------------------------------------------------
+df <- df %>%
+  names[1]
+
+survey <- df %>%
   select (goal = "My goal for attending this session: - Open-Ended Response",
           expert = "On this topic, I consider myself:",
           useful = "In regards to this session, the content presented: - Is USEFUL to me",
@@ -31,13 +44,10 @@ survey <- survey %>%
 # Check that recoding worked
 table (survey$agree, survey$agree_R)
 
-
 # Summary Tables ----------------------------------------------------------
 
-# Base R
-
-table (survey$agree) # Counts
-data.frame (table (survey$agree)) # Counts
-data.frame(prop.table (table (survey$agree))) # Proportion
+useful_table <- survey  %>%
+  group_by (useful) %>%
+  count ()
 
 
