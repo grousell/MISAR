@@ -1,14 +1,12 @@
 
-# File with example of how to merge two data sets -------------------------
+# 02_Merge Data Sets -------------------------------------
 
 library(tidyverse)
-
 
 # Load 2 data sets with common identiifer ---------------------------------
 
 df_1 <- read_csv ("https://raw.githubusercontent.com/grousell/MISAR/master/Data/survey_data_1.csv")
 df_2 <- read_csv ("https://raw.githubusercontent.com/grousell/MISAR/master/Data/survey_data_2.csv")
-
 
 # Merge two data sets together --------------------------------------------
 
