@@ -16,25 +16,8 @@ df <- df_1 %>%
 
 remove (df_1, df_2)
 
-# Select variables of interest and rename
 
-survey <- df %>%
-  select (school,
-          goal = "My goal for attending this session: - Open-Ended Response",
-          expert = "On this topic, I consider myself:",
-          useful = "In regards to this session, the content presented: - Is USEFUL to me",
-          applicable = "In regards to this session, the content presented: - Is APPLICABLE to my job",
-          changed = "In regards to this session, the content presented: - Has CHANGED my thinking",
-          reinforced = "In regards to this session, the content presented: - Has REINFORCED my thinking",
-          knowledge = "Concerning the content of the session, how much of the following has increased? - KNOWLEDGE of content presented",
-          confidence = "Concerning the content of the session, how much of the following has increased? - CONFIDENCE that you can apply the knowledge in your job",
-          motivation = "Concerning the content of the session, how much of the following has increased? - MOTIVATION to implement the content/techniques presented",
-          session_valuable = "How much do you agree...I found this session valuable"
-  )
-
-# glimpse(survey)
-
-# Recode Agree to Binary  -------------------------------------------------------
+# Recoding data   -------------------------------------------------------
 
 survey <- survey %>%
   mutate (agree_R = recode (agree,
