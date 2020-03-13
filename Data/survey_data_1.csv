@@ -1,4 +1,4 @@
-RespondentID,StartDate,EndDate,school,goal,consider_self,session_useful,session_applicable,session_changed,session_reinforced,learned_today
+RespondentID,StartDate,EndDate,school,What is your goal for attending this session?,consider_self,session_useful,session_applicable,session_changed,session_reinforced,learned_today
 123464,04/26/2017 18:57:34,04/26/2017 19:09:14,Shermer High School,To be more effective in the teaching of mathematics.,Skilled/Knowledgeable,5 - Significantly,5 - Significantly,5 - Significantly,5 - Significantly,How to use pentominoes.
 123466,04/26/2017 18:55:40,04/26/2017 19:04:18,Degrassi Junior High,Learn as many effective math strategies as possible to support students in their learning.,Skilled/Knowledgeable,4,4,5 - Significantly,5 - Significantly,The importance of concrete learning for all students in all grades.
 123479,04/26/2017 18:54:37,04/26/2017 19:03:38,Ridgemont High School,To gain new understanding to support our students and my colleagues.,Skilled/Knowledgeable,5 - Significantly,4,3,5 - Significantly,"Activities with Pentominos, utilize more of the books in the 'box'."
